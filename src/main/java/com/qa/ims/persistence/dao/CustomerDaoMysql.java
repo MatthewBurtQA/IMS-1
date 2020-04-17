@@ -85,7 +85,7 @@ public class CustomerDaoMysql implements Dao<Customer> {
 	}
 
 	/**
-	 * Creates a customer in the database
+	 * Creates a customer in the database UPDATE ME WITH NEW COMPONENTS PLS. 
 	 * 
 	 * @param customer - takes in a customer object. id will be ignored
 	 */
@@ -118,7 +118,7 @@ public class CustomerDaoMysql implements Dao<Customer> {
 
 	/**
 	 * Updates a customer in the database
-	 * 
+	 *  also needs updating with the new variables for customer. then...rest should be fine. Omnissiah be praised.
 	 * @param customer - takes in a customer object, the id field will be used to
 	 *                 update that customer in the database
 	 * @return
@@ -128,7 +128,8 @@ public class CustomerDaoMysql implements Dao<Customer> {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
 			statement.executeUpdate("update customers set first_name ='" + customer.getFirstName() + "', surname ='"
-					+ customer.getSurname() + "' where customer_id =" + customer.getId());
+					+ customer.getSurname() + "', address ='" + customer.getAddress() + "', email ='"+ customer.getEmail() 
+					+ "', phone_number ='"+ customer.getPhoneNumber() + "' where customer_id =" + customer.getId());
 			return readCustomer(customer.getId());
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
