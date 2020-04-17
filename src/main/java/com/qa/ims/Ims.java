@@ -86,7 +86,7 @@ public class Ims {
 	 * @param password
 	 */
 	public void init(String username, String password) {
-		init("jdbc:mysql://35.199.190.25", username, password, "src/main/resources/sql-schema.sql");
+		init("jdbc:mysql://35.205.20.221/", username, password, "src/main/resources/sql-schema.sql");
 	}
 
 	public String readFile(String fileLocation) {
