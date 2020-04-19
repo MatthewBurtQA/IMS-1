@@ -17,10 +17,13 @@ public class Customer {
 		this.phoneNumber = phoneNumber;
 	}
 
-	public Customer(Long id, String firstName, String surname) {
+	public Customer(Long id, String firstName, String surname, String address, String email, String phoneNumber) {
 		this.id = id;
 		this.firstName = firstName;
 		this.surname = surname;
+		this.address = address;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
 	}
 
 	public Long getId() {
@@ -73,7 +76,9 @@ public class Customer {
 	}
 
 	public String toString() {
-		return "id:" + id + " first name:" + firstName + " surname:" + surname;
+		return "id:" + id + " first name: " + firstName + " surname: " + surname
+				+  " address: " + address + " email: " + email
+				+ " phone number: " + phoneNumber;
 	}
 
 	@Override

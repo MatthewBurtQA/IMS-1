@@ -78,8 +78,8 @@ public class CustomerController implements CrudController<Customer>{
 		String email = getInput();
 		LOGGER.info("Finally, your phone number");
 		String phoneNumber = getInput();
-		//Customer customer = customerService.update(new Customer(id, firstName, surname, address, email, phoneNumber));
-		Customer customer = customerService.update(new Customer(firstName, surname, address, email, phoneNumber));
+		Customer customer = customerService.update(new Customer(id, firstName, surname, address, email, phoneNumber));
+		//Customer customer = customerService.update(new Customer(firstName, surname, address, email, phoneNumber));
 
 		LOGGER.info("Customer Updated");
 		return customer;

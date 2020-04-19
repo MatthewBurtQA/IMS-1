@@ -46,7 +46,7 @@ public class CustomerDaoMysql implements Dao<Customer> {
 		String email = resultSet.getString("email");
 		String phoneNumber = resultSet.getString("phone_number");
 		
-		return new Customer(id, firstName, surname);
+		return new Customer(id, firstName, surname, address, email, phoneNumber);
 	}
 
 	/**
@@ -93,8 +93,9 @@ public class CustomerDaoMysql implements Dao<Customer> {
 	public Customer create(Customer customer) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("insert into customers(first_name, surname) values('" + customer.getFirstName()
-					+ "','" + customer.getSurname() + "')");
+			statement.executeUpdate("insert into customers(first_name, surname, address, email, phone_number) values('" + customer.getFirstName()
+					+ "','" + customer.getSurname() + "','" +customer.getAddress() + "','" + customer.getEmail()  
+					+  "','"+ customer.getPhoneNumber() +"')" );
 			return readLatest();
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
