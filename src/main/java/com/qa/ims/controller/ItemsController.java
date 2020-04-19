@@ -10,7 +10,7 @@ import com.qa.ims.utils.Utils;
 
 public class ItemsController implements CrudController<Items> {
 
-public static final Logger LOGGER = Logger.getLogger(CustomerController.class);
+public static final Logger LOGGER = Logger.getLogger(ItemsController.class);
 	
 	private CrudServices<Items> itemsService;
 	
