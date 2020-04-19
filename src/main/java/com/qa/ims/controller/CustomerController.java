@@ -41,14 +41,22 @@ public class CustomerController implements CrudController<Customer>{
 
 	/**
 	 * Creates a customer by taking in user input
+	 * devNote: Needs changing to fit new constructor
 	 */
 	@Override
 	public Customer create() {
-		LOGGER.info("Please enter a first name");
+		LOGGER.info("Please enter your first name");
 		String firstName = getInput();
-		LOGGER.info("Please enter a surname");
+		LOGGER.info("Please enter your surname");
 		String surname = getInput();
-		Customer customer = customerService.create(new Customer(firstName, surname));
+		LOGGER.info("Please enter your address");
+		String address = getInput();
+		LOGGER.info("Please enter your email address");
+		String email = getInput();
+		LOGGER.info("Finally, please enter your phone number");
+		String phoneNumber = getInput();
+		
+		Customer customer = customerService.create(new Customer(firstName, surname, address, email, phoneNumber));
 		LOGGER.info("Customer created");
 		return customer;
 	}
@@ -64,7 +72,15 @@ public class CustomerController implements CrudController<Customer>{
 		String firstName = getInput();
 		LOGGER.info("Please enter a surname");
 		String surname = getInput();
-		Customer customer = customerService.update(new Customer(id, firstName, surname));
+		LOGGER.info("Please enter your address");
+		String address = getInput();
+		LOGGER.info("Please enter your email address");
+		String email = getInput();
+		LOGGER.info("Finally, your phone number");
+		String phoneNumber = getInput();
+		Customer customer = customerService.update(new Customer(id, firstName, surname, address, email, phoneNumber));
+		//Customer customer = customerService.update(new Customer(firstName, surname, address, email, phoneNumber));
+
 		LOGGER.info("Customer Updated");
 		return customer;
 	}

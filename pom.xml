@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.qa.ims</groupId>
-	<artifactId>Matthew-Burt-SoftwareDev-March16-2020</artifactId>
+	<artifactId>MatthewBurt-SoftwareMarch16</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
