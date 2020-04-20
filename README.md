@@ -1,5 +1,5 @@
 Coverage: 34%
-# Project Title
+# IMS
 An inventory management system for the adeptus ministorum, holding data on wargear, clients and their orders. 
 
 End with an example of getting some data out of the system or using it for a little demo
@@ -47,5 +47,5 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 Chris for the framework
 Nick for his eagle eyes in spotting my mistakes
 My cat, for being a calming presence during bug fixing 
+https://github.com/MatthewBurtQA/IMS-1/projects my kanban
 
-# IMS-1
