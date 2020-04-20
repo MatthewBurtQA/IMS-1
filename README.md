@@ -1,26 +1,11 @@
 Coverage: 34%
 # IMS
 An inventory management system for the adeptus ministorum, holding data on wargear, clients and their orders. 
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system. Break down into which tests and what they do
+contains ERD within the slideshow.
 
 ### Unit Tests 
 
 Unit test currently just for customer related matters, run JUnit within the application. 
-```
-Give an example
-```
-
-### Integration Tests 
-Explain what these tests test, why and how to run them
-
-```
-Give an example
-```
 
 ### And coding style tests
 Check sonarqube, and look for code smells. I had many at first but they've been trimmed down quite rapidly.
