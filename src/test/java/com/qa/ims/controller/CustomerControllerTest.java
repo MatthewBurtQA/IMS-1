@@ -34,10 +34,10 @@ public class CustomerControllerTest {
 	private CustomerController customerController;
 
 	@Test
-	public void readAllTest() {
+	public void readAllTestTwo() {
 		CustomerController customerController = new CustomerController(customerServices);
 		List<Customer> customers = new ArrayList<>();
-		customers.add(new Customer("Chris", "P","London", "something@qa", "07555" ));
+		customers.add(new Customer(1l,"Chris", "P","London", "something@qa", "07555"));
 		Mockito.when(customerServices.readAll()).thenReturn(customers);
 		assertEquals(customers, customerController.readAll());
 	}
