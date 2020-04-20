@@ -124,7 +124,7 @@ public class OrdersDaoMysql implements Dao<Orders> {
 	 * @return
 	 */
 	@Override
-	public Orders update(Orders orders) {
+	public Orders update(Orders orders) { // Should be done with INNER JOINS on the tables, then grab price from there. I ran out of time however. 
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
 			statement.executeUpdate("update orders set customer_id ='" + orders.getCustomerId() + "', order_date ='"
